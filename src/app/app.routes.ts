@@ -3,6 +3,7 @@ import { Counter } from './pages/counter/counter';
 import { HeroPageComponent } from './pages/hero-page-component/hero-page-component';
 import { Component } from '@angular/core';
 import { Home } from './pages/home/home';
+import { DragonballPage } from './pages/dragonball-page/dragonball-page';
 
 export const routes: Routes = [
   {
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'hero',
     component: HeroPageComponent
+  },
+  {
+    path: 'dragonball',
+    component: DragonballPage
   },
   {
     path: '**',
