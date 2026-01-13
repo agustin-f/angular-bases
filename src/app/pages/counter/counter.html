@@ -1,8 +1,10 @@
 <h1>Hola mundo</h1>
 <h2>Contador: {{counter}}</h2>
 <h2>Señal: {{counterSignal()}}</h2>
-<button (click)="decreaseBy(1)">-1</button>
-<button (click)="increaseBy(1)">+1</button>
-<button (click)="resetCounter()">Resetear</button>
+
+<button type="button" class="btn btn-primary m-2" (click)="decreaseBy(1)">Menos</button>
+<button type="button" class="btn btn-primary m-2" (click)="increaseBy(1)">Más</button>
+<button type="button" class="btn btn-danger m-2" (click)="resetCounter()">Resetear</button>
+
 <p>Este es un mensaje de prueba.</p>
 <p>Este es otro mensaje de prueba</p>

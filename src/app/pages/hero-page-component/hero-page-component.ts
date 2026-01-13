@@ -1,8 +1,9 @@
-import { Component, numberAttribute } from '@angular/core';
+import { UpperCasePipe } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hero-page-component',
-  imports: [],
+  imports: [UpperCasePipe],
   templateUrl: './hero-page-component.html',
   styleUrl: './hero-page-component.css',
 })
