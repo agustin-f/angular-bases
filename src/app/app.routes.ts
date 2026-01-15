@@ -3,8 +3,8 @@ import { Counter } from './pages/counter/counter';
 import { HeroPageComponent } from './pages/hero-page-component/hero-page-component';
 import { Component } from '@angular/core';
 import { Home } from './pages/home/home';
-import { DragonballPage } from './pages/dragonball-page/dragonball-page';
-import { DragonballSuperPage } from './pages/dragonball-page-super/dragonball-super-page';
+import { DragonballSuperPageComponent } from './pages/dragonball-page-super/dragonball-super-page';
+import { DragonballPageComponent } from './pages/dragonball-page/dragonball-page';
 
 export const routes: Routes = [
   {
@@ -21,11 +21,11 @@ export const routes: Routes = [
   },
   {
     path: 'dragonball',
-    component: DragonballPage
+    component: DragonballPageComponent
   },
   {
     path: 'dragonballsuper',
-    component: DragonballSuperPage
+    component: DragonballSuperPageComponent
   },
   {
     path: '**',

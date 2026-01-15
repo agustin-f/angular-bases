@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DragonballPage } from './dragonball-page';
+import { DragonballSuperPage } from './dragonball-super-page';
+import { DragonballPage } from '../dragonball-page/dragonball-page';
 
 describe('DragonballPage', () => {
   let component: DragonballPage;

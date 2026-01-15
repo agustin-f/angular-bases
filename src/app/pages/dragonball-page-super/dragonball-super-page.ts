@@ -1,54 +1,13 @@
-import { NgClass } from '@angular/common';
-import { Component, computed, signal } from '@angular/core';
-
-
-interface Character {
-  id:number;
-  name:string;
-  power:number;
-}
-
+import { Component, inject } from '@angular/core';
+import { CharacterListComponent } from '../../components/shared/dragonball/dragonball-characterlist';
+import { CharacterAddComponent } from '../../components/shared/dragonball-add/dragonball-add';
+import { DragonballService } from '../../services/dragonball.service';
 
 @Component({
-  selector: 'app-dragonball-page',
-  imports: [],
   templateUrl: './dragonball-super-page.html',
-  styleUrl: './dragonball-super-page.css',
+  selector: 'dragonball-super',
+  imports: [CharacterListComponent, CharacterAddComponent],
 })
-export class DragonballSuperPage {
-
-    name = signal('')
-    power = signal(0)
-
-    characters = signal<Character[]>([
-      {id: 1, name: 'Goku', power: 9001},
-      {id:2, name: 'Vegeta', power: 5000}
-    ]);
-
-
-    addCharacter(){
-      const lastCharacter = this.characters()[this.characters().length - 1];
-      console.log("El nombre es: " + this.name() + " y su poder es de " + this.power());
-
-      if(!this.name() || !this.power() || this.power() <= 0){
-          return;
-      }
-
-      const newCharacter: Character = {
-         id: this.characters().length + 1,
-         name: this.name(),
-         power: this.power()
-      };
-
-      this.characters.update(
-        (list)=>[... list, newCharacter]
-      )
-      this.resetFiels()
-    }
-
-      resetFiels(){
-        this.name.set('');
-        this.power.set(0);
-      }
-
+export class DragonballSuperPageComponent {
+  public dragonballService = inject(DragonballService);
 }
